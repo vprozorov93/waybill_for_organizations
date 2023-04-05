@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>939</width>
+    <height>703</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>939</width>
+    <height>703</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>939</width>
+    <height>703</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Путевые листы</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_main">
+       <attribute name="title">
+        <string>Главная</string>
+       </attribute>
+       <widget class="QComboBox" name="comboBox_choose_driver">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>30</y>
+          <width>391</width>
+          <height>26</height>
+         </rect>
+        </property>
+        <item>
+         <property name="text">
+          <string/>
+         </property>
+        </item>
+       </widget>
+       <widget class="QComboBox" name="comboBox_choose_car">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>30</y>
+          <width>391</width>
+          <height>26</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QDateEdit" name="dateEdit_end">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>90</y>
+          <width>110</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="minimumDate">
+         <date>
+          <year>2023</year>
+          <month>1</month>
+          <day>1</day>
+         </date>
+        </property>
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QDateEdit" name="dateEdit_start">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>90</y>
+          <width>110</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="minimumDate">
+         <date>
+          <year>2023</year>
+          <month>1</month>
+          <day>1</day>
+         </date>
+        </property>
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_date_start">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>93</y>
+          <width>121</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Путевые листы с:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_date_end">
+        <property name="geometry">
+         <rect>
+          <x>280</x>
+          <y>93</y>
+          <width>21</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>по:</string>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_end_date_next_date">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>130</y>
+          <width>151</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>на следующий день</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_end_date_current_date">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>160</y>
+          <width>141</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>на день начала</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QRadioButton" name="radioButton_end_date_choose_date">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>190</y>
+          <width>71</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>в дату:</string>
+        </property>
+        <property name="checked">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_date_end_waybill">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>132</y>
+          <width>211</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Дата окончания путевого листа:</string>
+        </property>
+       </widget>
+       <widget class="QDateEdit" name="dateEdit_end_waybill">
+        <property name="geometry">
+         <rect>
+          <x>330</x>
+          <y>190</y>
+          <width>110</width>
+          <height>24</height>
+         </rect>
+        </property>
+        <property name="readOnly">
+         <bool>false</bool>
+        </property>
+        <property name="minimumDate">
+         <date>
+          <year>2023</year>
+          <month>1</month>
+          <day>1</day>
+         </date>
+        </property>
+        <property name="calendarPopup">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>640</x>
+          <y>540</y>
+          <width>113</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Напечатать</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="geometry">
+         <rect>
+          <x>760</x>
+          <y>540</y>
+          <width>113</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Сохранить</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_data">
+       <attribute name="title">
+        <string>Данные машин и водителей</string>
+       </attribute>
+       <widget class="QWidget" name="verticalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>901</width>
+          <height>601</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_data" stretch="0,0">
+         <property name="spacing">
+          <number>-1</number>
+         </property>
+         <property name="sizeConstraint">
+          <enum>QLayout::SetMaximumSize</enum>
+         </property>
+         <item>
+          <widget class="QGroupBox" name="groupBox_drivers">
+           <property name="font">
+            <font>
+             <pointsize>13</pointsize>
+             <kerning>true</kerning>
+            </font>
+           </property>
+           <property name="title">
+            <string>Водители</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+           </property>
+           <widget class="QTableWidget" name="tableWidget_drivers">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>5</x>
+              <y>60</y>
+              <width>890</width>
+              <height>230</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>881</width>
+              <height>230</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>890</width>
+              <height>230</height>
+             </size>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="dragEnabled">
+             <bool>false</bool>
+            </property>
+            <property name="textElideMode">
+             <enum>Qt::ElideRight</enum>
+            </property>
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+            <property name="columnCount">
+             <number>6</number>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>100</number>
+            </attribute>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>№</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignJustify|AlignVCenter</set>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>ФИО</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignJustify|AlignVCenter</set>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>ФИО сокр.</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignJustify|AlignVCenter</set>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Водительское удостоверение</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignJustify|AlignVCenter</set>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Категория удостоверения</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignJustify|AlignVCenter</set>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Префикис путевого листа</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignJustify|AlignVCenter</set>
+             </property>
+            </column>
+           </widget>
+           <widget class="QPushButton" name="btn_create_driver">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>20</y>
+              <width>113</width>
+              <height>32</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Создать</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="btn_delete_driver">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>20</y>
+              <width>113</width>
+              <height>32</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Удалить</string>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="groupBox_cars">
+           <property name="font">
+            <font>
+             <pointsize>13</pointsize>
+            </font>
+           </property>
+           <property name="title">
+            <string>Автомобили</string>
+           </property>
+           <widget class="QPushButton" name="btn_create_car">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>20</y>
+              <width>113</width>
+              <height>32</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Создать</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="btn_delete_car">
+            <property name="geometry">
+             <rect>
+              <x>120</x>
+              <y>20</y>
+              <width>113</width>
+              <height>32</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Удалить</string>
+            </property>
+           </widget>
+           <widget class="QTableWidget" name="tableWidget_cars">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="geometry">
+             <rect>
+              <x>5</x>
+              <y>60</y>
+              <width>890</width>
+              <height>230</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>881</width>
+              <height>230</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>890</width>
+              <height>230</height>
+             </size>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="dragEnabled">
+             <bool>false</bool>
+            </property>
+            <property name="textElideMode">
+             <enum>Qt::ElideRight</enum>
+            </property>
+            <property name="sortingEnabled">
+             <bool>true</bool>
+            </property>
+            <property name="columnCount">
+             <number>6</number>
+            </property>
+            <attribute name="horizontalHeaderCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="horizontalHeaderDefaultSectionSize">
+             <number>100</number>
+            </attribute>
+            <attribute name="horizontalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <attribute name="verticalHeaderCascadingSectionResizes">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderStretchLastSection">
+             <bool>true</bool>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>№</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignJustify|AlignVCenter</set>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Модель</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignJustify|AlignVCenter</set>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Гос. номер</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignJustify|AlignVCenter</set>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Тип топлива</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignJustify|AlignVCenter</set>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Макс. расход топлива</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignJustify|AlignVCenter</set>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Код топлива</string>
+             </property>
+             <property name="textAlignment">
+              <set>AlignJustify|AlignVCenter</set>
+             </property>
+            </column>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_settings">
+       <attribute name="title">
+        <string>Настройки</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox_waybill_settings">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>0</y>
+          <width>431</width>
+          <height>281</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Настройки документа</string>
+        </property>
+        <widget class="QLabel" name="label_dispatcher">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>42</y>
+           <width>81</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Диспетчер:</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_dispatcher">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>40</y>
+           <width>281</width>
+           <height>21</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_fuel_settings">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>80</y>
+           <width>101</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Коды топлива:</string>
+         </property>
+        </widget>
+        <widget class="QTableWidget" name="tableWidget_fuel_settings">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>110</y>
+           <width>261</width>
+           <height>101</height>
+          </rect>
+         </property>
+         <column>
+          <property name="text">
+           <string>Топливо</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Код</string>
+          </property>
+         </column>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_delivery_type">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>230</y>
+           <width>281</width>
+           <height>21</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_delivery_type">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>232</y>
+           <width>101</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Вид перевозок</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_waybill_settings_company">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>300</y>
+          <width>431</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Настройки компании</string>
+        </property>
+        <widget class="QLineEdit" name="lineEdit_company_name">
+         <property name="geometry">
+          <rect>
+           <x>155</x>
+           <y>40</y>
+           <width>256</width>
+           <height>21</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_company_address">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>70</y>
+           <width>251</width>
+           <height>21</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_company_ogrn">
+         <property name="geometry">
+          <rect>
+           <x>60</x>
+           <y>100</y>
+           <width>351</width>
+           <height>21</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_delivery_department_title">
+         <property name="geometry">
+          <rect>
+           <x>230</x>
+           <y>130</y>
+           <width>181</width>
+           <height>21</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEdit_start_address">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>160</y>
+           <width>231</width>
+           <height>21</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_company_name">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>42</y>
+           <width>131</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Название компании:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_company_address">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>72</y>
+           <width>141</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Юр. адрес компании:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_company_ogrn">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>102</y>
+           <width>51</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>ОГРН:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_delivery_department_title">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>132</y>
+           <width>211</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Отдел отвечющий за перевозки:</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_delivery_start_address">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>162</y>
+           <width>211</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Адрес начала маршрута:</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>939</width>
+     <height>24</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
